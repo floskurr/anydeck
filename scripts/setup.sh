@@ -35,7 +35,7 @@ sudo mkdir -p "$SERVICE_DIR"
 
 write_if_missing "[Service]" "$SERVICE_DIR/override.conf"
 write_if_missing "ExecStart=" "$SERVICE_DIR/override.conf"
-write_if_missing "ExecStart=-/sbin/agetty --autologin alyxx --noclear %I \$TERM" "$SERVICE_DIR/override.conf"
+write_if_missing 'ExecStart=-/sbin/agetty --autologin alyxx --noclear %I \$TERM' "$SERVICE_DIR/override.conf"
 
 # Link configs
 HOME_CONFIGS_DIR="$(pwd)/../home"
